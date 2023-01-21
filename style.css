@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'Red Hat Display', sans-serif;
+	background-color: var(--Pale-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 15px;
+}
+
+a {
+	font-size: 14px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.component {
+	margin: 30px auto;
+	height: 620px;
+	width: 320px;
+	border: none;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.component-image {
+	width: 100%;
+	height: 220px;
+	background-image: url('./images/illustration-hero.svg');
+	background-position: bottom;
+}
+
+.component-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+	height: 400px;
+	background-color: white;
+}
+
+.component-description p {
+	color: gray;
+	font-weight: 700;
+	text-align: center;
+}
+
+.chosen-offer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	width: 100%;
+	border-radius: 10px;
+	background-color: var(--Very-pale-blue);
+}
+
+button {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+}
+
+.accept {
+	color: white;
+	background-color: var(--Bright-blue);
+	box-shadow: 0 15px 15px var(--Pale-blue);
+}
+
+.accept:hover {
+	background-color: var(--Dark-blue);
+}
+
+.cancel {
+	color: gray;
+	background-color: transparent;
+}
+
+.cancel:hover {
+	color: black;
+}
+
+@media (min-width: 400px) {
+	.component {
+		height: 720px;
+		width: 450px;
+	}
+	.component-image {
+		height: 220px;
+	}
+	.component-description {
+		justify-content: space-between;
+		padding: 40px;
+		height: 500px;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	p {
+		font-size: 16px;
+	}
+	a {
+		font-size: 16px;
+	}
+	button {
+		font-size: 18px;
+	}
+	.chosen-offer {
+		padding: 20px 30px;
+	}
+	.chosen-offer p {
+		width: 150px;
+		text-align: left;
+	}
+	h2 {
+		font-size: 18px;
+	}
+}
